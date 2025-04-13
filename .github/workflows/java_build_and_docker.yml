@@ -3,7 +3,7 @@ name: Java Build and Docker Push
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-push:
