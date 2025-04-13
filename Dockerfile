@@ -6,5 +6,5 @@ RUN gradle build --no-daemon
 
 # Use a lightweight Java runtime for the final image
 FROM openjdk:17-jdk-slim
-COPY --from=build /home/gradle/project/build/libs/*.jar app.jar
+COPY --from=build /home/gradle/src/build/libs/*.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
